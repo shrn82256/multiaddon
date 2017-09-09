@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather popup</title>
+        <link rel="stylesheet" href="dist/main.css" type="text/css">
+    </head>
+    <body>
+        <div id="menu" class="menu">
+            <span id="location">No location set</span>
+            <div id="menu-icon" class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <div class="options">
+                    <button class="units-btn active" data-units="metric" type="button">&deg;C</button>
+                    <button class="units-btn" data-units="imperial" type="button">&deg;F</button>
+                    <button id="refresh">Refresh</button>
+                </div>
+                <div class="location-search">
+                    <h3>Change location</h3>
+                    <input id="location-input" type="text" placeholder="e.g. Delhi, IN">
+                    <button id="search">
+                        <img src="icons/search_glass.svg">
+                    </button>
+                    <p class="instructions">Search for a location and select from those shown below. For increased accuracy, include a two character country code</p>
+                </div>
+                <div id="locations" class="locations"></div>
+            </div>
+        </div><!--menu-->
+        <div id="spinner" class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="main">
+            <!-- app markup placed here-->
+        </div>
+        <div id="no-location">
+            <p>Please select a location from the menu in the top right corner.</p>
+        </div>
+        <div id="error-message">
+            <p>Unable to update data.</p>
+        </div>
+        <script src="dist/main.js"></script>
+    </body>
+</html>

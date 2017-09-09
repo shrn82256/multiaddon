@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather popup</title>
+        <link rel="stylesheet" href="dist/main.css" type="text/css">
+    </head>
+    <body>
+        <div id="menu" class="menu">
+            <span>Waterloo</span>
+            <div id="menu-icon" class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="sidebar" class="sidebar">
+                <div class="options">
+                    <button class="active" type="button">&deg;C</button>
+                    <button type="button">&deg;F</button>
+                    <button class="refresh">Refresh</button>
+                </div>
+                <div class="location-search">
+                    <h3>Change location</h3>
+                    <input class="location-input" type="text" placeholder="e.g. Waterloo, CA">
+                    <button class="search">O</button>
+                    <p class="instructions">Search for a location and select from those shown below. For increased accuracy, include a two character country code</p>
+                </div>
+                <div class="locations">
+                    <div class="location"><span>Waterloo, CA</span><span>15&deg;</span></div>
+                    <div class="location"><span>Washington, CA</span><span>12&deg;</span></div>
+                </div>
+            </div>
+        </div><!--menu-->
+        <div id="current" class="current">
+            <img class="current-img" src="icons/01.png" alt="icon"/>
+            <div class="weather">
+                <span>15&deg</span>
+                <span>Sunny</span>
+            </div>
+        </div><!--current-->
+        <hr>
+        <div id="today" class="today">
+            <div class="period">
+                <span class="time">10:00</span>
+                <img src="icons/01.png" alt="icon">
+                <span class="temp">17&deg</span>
+                <span class="precip">0mm</span>
+            </div>
+            <div class="period">
+                <span class="time">13:00</span>
+                <img src="icons/01.png" alt="icon">
+                <span class="temp">24&deg</span>
+                <span class="precip">0mm</span>
+            </div>
+            <div class="period">
+                <span class="time">16:00</span>
+                <img src="icons/01.png" alt="icon">
+                <span class="temp">25&deg</span>
+                <span class="precip">0mm</span>
+            </div>
+            <div class="period">
+                <span class="time">19:00</span>
+                <img src="icons/01.png" alt="icon">
+                <span class="temp">18&deg</span>
+                <span class="precip">0mm</span>
+            </div>
+            <div class="period">
+                <span class="time">22:00</span>
+                <img src="icons/01.png" alt="icon">
+                <span class="temp">15&deg</span>
+                <span class="precip">0mm</span>
+            </div>
+        </div><!--today-->
+        <hr>
+        <div id="forecast" class="forecast">
+            <div class="day">
+                <div class="img-wrapper">
+                    <img src="icons/01.png" alt="icon"/>
+                </div>
+                <div class="weather">
+                    <span class="temp">17&deg</span>
+                    <span class="description">Partly cloudy</span>
+                </div>
+                <div class="date">
+                    <p class="weekday">Monday</p>
+                    <p class="month">January 19</p>
+                </div>
+            </div><!--day-->
+            <div class="day">
+                <div class="img-wrapper">
+                    <img src="icons/01.png" alt="icon"/>
+                </div>
+                <div class="weather">
+                    <span class="temp">17&deg</span>
+                    <span class="description">Partly cloudy</span>
+                </div>
+                <div class="date">
+                    <p class="weekday">Tuesday</p>
+                    <p class="month">January 20</p>
+                </div>
+            </div><!--day-->
+            <div class="day">
+                <div class="img-wrapper">
+                    <img src="icons/01.png" alt="icon"/>
+                </div>
+                <div class="weather">
+                    <span class="temp">17&deg</span>
+                    <span class="description">Partly cloudy</span>
+                </div>
+                <div class="date">
+                    <p class="weekday">Wednesday</p>
+                    <p class="month">January 21</p>
+                </div>
+            </div><!--day-->
+            <div class="day">
+                <div class="img-wrapper">
+                    <img src="icons/01.png" alt="icon"/>
+                </div>
+                <div class="weather">
+                    <span class="temp">17&deg</span>
+                    <span class="description">Partly cloudy</span>
+                </div>
+                <div class="date">
+                    <p class="weekday">Thursday</p>
+                    <p class="month">January 22</p>
+                </div>
+            </div><!--day-->
+            <div class="day">
+                <div class="img-wrapper">
+                    <img src="icons/01.png" alt="icon"/>
+                </div>
+                <div class="weather">
+                    <span class="temp">17&deg</span>
+                    <span class="description">Partly cloudy</span>
+                </div>
+                <div class="date">
+                    <p class="weekday">Friday</p>
+                    <p class="month">January 23</p>
+                </div>
+            </div><!--day-->
+        </div><!--forecast-->
+        <!--<script src="bower/react/react.js"></script>-->
+        <!--<script src="src/main.js"></script>-->
+        <script>
+            var button = document.getElementById('menu-icon');
+            var sidebar = document.getElementById('sidebar');
+            var shown = false;
+            button.onclick = function(e){
+                if(shown) sidebar.style.display = 'none';
+                else sidebar.style.display = 'block';
+                shown = !shown;
+            }
+        </script>
+    </body>
+</html>
