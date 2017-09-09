@@ -1,0 +1,49 @@
+@animationSpeed2: 1.5s;
+
+.spinner{
+  display: none;
+  clear: both;
+  margin: 100px auto;
+  width: 40px;
+  height: 10px;
+  position: relative;
+  top: 50px;
+
+  & > div{
+    background-color: #6a6a6a;
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    border-radius: 5px;
+    -webkit-animation: pulse @animationSpeed2 infinite ease-in-out;
+    animation: pulse @animationSpeed2 infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    /*&:not:first-child{ margin-left: 5px; }*/
+
+    &:nth-child(2){
+        margin-left: 5px;
+        -webkit-animation-delay: @animationSpeed2/3;
+        animation-delay: @animationSpeed2/3;
+    }
+    &:nth-child(3){
+        margin-left: 5px;
+        -webkit-animation-delay: (@animationSpeed2/3) * 2;
+        animation-delay: (@animationSpeed2/3) * 2;
+    }
+  }
+}
+
+@-webkit-keyframes pulse {
+    0%    { -webkit-transform: scale(0.0); }
+    50%   { -webkit-transform: scale(1.0); }
+    100%  { -webkit-transform: scale(0.0); }
+}
+@keyframes pulse {
+    0%    { transform: scale(0.0); }
+    50%   { transform: scale(1.0); }
+    100%  { transform: scale(0.0); }
+}
+
